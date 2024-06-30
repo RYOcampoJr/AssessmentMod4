@@ -72,7 +72,7 @@ The React frontend provides a simple interface for interacting with the smart co
 - Double Balance
 
 ### Forked From
-MetacrafterChris/SCM-Starter
+[MetacrafterChris/SCM-Starter](https://github.com/MetacrafterChris/SCM-Starter)
 
 ### Author
 Adrian Oraya
