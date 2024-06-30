@@ -9,13 +9,15 @@ contract Assessment {
 
     event Deposit(uint256 amount);
     event Withdraw(uint256 amount);
+    event BalanceWiped();
+    event BalanceDoubled(uint256 newBalance);
 
     constructor(uint initBalance) payable {
         owner = payable(msg.sender);
         balance = initBalance;
     }
 
-    function getBalance() public view returns(uint256){
+    function getBalance() public view returns (uint256) {
         return balance;
     }
 
@@ -56,5 +58,21 @@ contract Assessment {
 
         // emit the event
         emit Withdraw(_withdrawAmount);
+    }
+
+    function wipeBalance() public {
+        require(msg.sender == owner, "You are not the owner of this account");
+        balance = 0;
+
+        // emit the event
+        emit BalanceWiped();
+    }
+
+    function doubleBalance() public {
+        require(msg.sender == owner, "You are not the owner of this account");
+        balance *= 2;
+
+        // emit the event
+        emit BalanceDoubled(balance);
     }
 }
