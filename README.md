@@ -71,8 +71,8 @@ The React frontend provides a simple interface for interacting with the smart co
 - Wipe Balance
 - Double Balance
 
+### Forked From
+MetacrafterChris/SCM-Starter
+
 ### Author
 Adrian Oraya
-
-### License
-This project is licensed under the MIT License.
